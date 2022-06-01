@@ -1,1 +1,2 @@
-测试 springcloud config dev
+sping:
+  port: 999
