@@ -1,0 +1,2 @@
+原用处：接受 socket 发送的 json 字符串，转为 https 发送至指定的 url
+使用 Java 发送 HTTPS
