@@ -1,0 +1,4 @@
+（1）使用的授权语句：GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
+（2）docker 安装 mysql 5.7 https://blog.csdn.net/whowhowhoisimportant/article/details/115322292
+
+

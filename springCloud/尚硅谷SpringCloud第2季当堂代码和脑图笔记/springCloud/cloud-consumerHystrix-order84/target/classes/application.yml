@@ -1,0 +1,34 @@
+server:
+  port: 84
+
+spring:
+  application:
+    name: cloud-consumerHystrix-service
+  cloud:
+    #注册到zookeeper地址
+    zookeeper:
+      connect-string: 112.74.97.91:2181
+
+#设置feign客户端超时时间(OpenFeign默认支持ribbon)
+ribbon:
+  #指的是建立连接所用的时间，适用于网络状况正常的情况下,两端连接所用的时间
+  ReadTimeout: 5000
+  #指的是建立连接后从服务器读取到可用资源所用的时间
+  ConnectTimeout: 5000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000 # 熔断超时设置，默认为1秒
+
+
+logging:
+  level:
+    # feign日志以什么级别监控哪个接口
+    wang.study.server.OpenFeignServer: debug
+feign:
+  hystrix:
+    enabled: true

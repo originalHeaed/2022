@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-config-center3344" />
+        <module name="seata-storage-server9102" />
+        <module name="cloud-eureka-server7001" />
+        <module name="cloud-eureka-server7002" />
+        <module name="cloudalibaba-sentinel-consumer9007" />
+        <module name="cloudalibaba-sentinel-consumer9006" />
+        <module name="cloud-consumerzk-order82" />
+        <module name="cloudalibaba-sentinel-provider9004" />
+        <module name="cloud-consumerzk-order81" />
+        <module name="seata-order-service9100" />
+        <module name="cloudalibaba-sentinel-provider9005" />
+        <module name="cloud-consumerOpenFeign-order83" />
+        <module name="cloud-stream-rabbitMQ-consumer8012" />
+        <module name="cloudalibaba-config-nacos9015" />
+        <module name="cloud-stream-rabbitMQ-consumer8011" />
+        <module name="cloudalibaba-sentinel-service9003" />
+        <module name="cloud-config-client3355" />
+        <module name="cloud-api-commons" />
+        <module name="cloud-providerHystrix-payment8008" />
+        <module name="cloud-consumerHystrix-order84" />
+        <module name="cloudalibaba-consumer-nacos-order9010" />
+        <module name="seata-account-server9101" />
+        <module name="cloud-provider-payment80006" />
+        <module name="cloudalibaba-provider-payment9002" />
+        <module name="cloudalibaba-provider-payment9001" />
+        <module name="cloud-provider-payment80002" />
+        <module name="cloud-gateway-gateway9527" />
+        <module name="cloud-provider-payment80004" />
+        <module name="cloud-stream-rabbitMQ-provider8010" />
+        <module name="cloud-provider-payment80001" />
+        <module name="cloud-consumer-order80" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

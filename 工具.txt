@@ -1,0 +1,5 @@
+（1）linux 中并发工具 
+（2）linux 中是一个利用URL语法在命令行下工作的文件传输工具 —— 它支持文件上传和下载，所以是综合传输工具，但按传统，习惯称cURL为下载工具。cURL还包含了用于程序开发的libcurl
+（3）keepalived —— 用于 nginx 的高可用，是一个独立的运行这程序，主要是用于提供虚拟 ip 以及虚拟 ip 的漂移，我们可以在多个机器上运行多个 keepalived，将这多个 keepalived 分配在同一个组中，然后将其中
+一个机器上的 keepalived 置为 master，其他的为 backup，其中只有 keepalived 为 master 的机器拥有该虚拟 ip，如果某个时间中该机器上的 keepalived 挂了，则会根据其他机器上同组的 keepalived 的
+优先级选举出一个 backup 作为新的 master，然后新的 master 也就拥有了虚拟 ip；

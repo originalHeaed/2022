@@ -1,0 +1,20 @@
+server:
+  port: 9010
+
+spring:
+  application:
+    name: nacos-payment-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 112.74.97.91:8848
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+provider:
+  name: nacos-payment-provider
+  uri: nacos/provider

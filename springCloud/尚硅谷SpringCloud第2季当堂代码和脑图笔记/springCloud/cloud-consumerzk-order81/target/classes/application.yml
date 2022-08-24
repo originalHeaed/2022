@@ -1,0 +1,10 @@
+server:
+  port: 81
+
+spring:
+  application:
+    name: cloud-consumerzk-order
+  cloud:
+    #注册到zookeeper地址
+    zookeeper:
+      connect-string: 112.74.97.91:2181

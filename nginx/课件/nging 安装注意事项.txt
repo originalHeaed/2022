@@ -1,0 +1,5 @@
+（1）如果启动 nginx 之后，在外面访问对应的 80 端口显示，
+出现 403 forbidden nginx，这个是由于启动用户和nginx工作用户不一致所致，
+可以在 nginx 安装目录下的 config/nginx.conf 中将 #user nobody 改为 user root（即你登陆时的用户）
+
+ 

@@ -1,0 +1,2 @@
+redis 使用 rdb 进行备份时：创建一个子进程，子进程与父进程采用读时共享，写时复制技术将内存中的数据写入临时文件中；
+关于 redis rdb 讲解不够细致，更详细的可以见：https://www.cnblogs.com/ysocean/p/9114268.html

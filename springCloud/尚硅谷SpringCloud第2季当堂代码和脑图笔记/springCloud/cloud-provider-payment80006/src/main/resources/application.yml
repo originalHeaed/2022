@@ -1,0 +1,16 @@
+###consul服务端口号
+server:
+  port: 8006
+
+spring:
+  application:
+    name: consul-provider-payment
+  ####consul注册中心地址
+  cloud:
+    consul:
+      host: 112.74.97.91
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        heartbeat:
+          enabled: true

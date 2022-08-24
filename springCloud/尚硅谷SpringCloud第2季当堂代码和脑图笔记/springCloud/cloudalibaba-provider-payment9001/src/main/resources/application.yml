@@ -1,0 +1,17 @@
+# nacos配置
+server:
+  port: 9001
+
+spring:
+  application:
+    name: nacos-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 112.74.97.91:3300 #Nacos服务注册中心地址
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -1,0 +1,35 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center #注册进 zk 服务器的微服务名
+  cloud:
+    config:
+      server:
+#        native:
+#          search-locations: file:///D:/properties/{label}
+        git:
+          uri: https://github.com/originalHeaed/2022.git
+          username: originalHeaed
+          password: BABAMAMA68729399
+          default-label: main
+    #注册到zookeeper地址
+    zookeeper:
+      connect-string: 112.74.97.91:2181
+#  profiles:
+#    active: native
+
+#rabbitmq相关配置
+  rabbitmq:
+    host: 112.74.97.91
+    port: 5672
+    username: guest
+    password: guest
+
+##rabbitmq相关配置,暴露bus刷新配置的端点
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'

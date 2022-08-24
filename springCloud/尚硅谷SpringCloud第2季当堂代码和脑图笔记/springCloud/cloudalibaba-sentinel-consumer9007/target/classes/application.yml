@@ -1,0 +1,27 @@
+server:
+  port: 9007
+
+spring:
+  application:
+    name: cloudAlibaba-sentinel-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 112.74.97.91:8848
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858 # 远程 dashboard 进行交互
+        port: 8719 # 本地启动对应的 http server 与 dashboard 进行交互
+        clientIp: 127.0.0.1
+      web-context-unify: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+# feign 开启对 sentinel 的支持
+feign:
+  sentinel:
+    enabled: true
