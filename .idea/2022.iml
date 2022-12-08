@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/GxpBridge/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HTTPSServer/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dataStructurePrac/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-api-commons/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-config-center3344/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-config-client3355/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-config-client3356/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-consumer-order80/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-consumerHystrix-order84/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-consumerOpenFeign-order83/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-consumerzk-order81/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-consumerzk-order82/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-eureka-server7001/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-eureka-server7002/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-gateway-gateway9527/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-provider-payment80001/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-provider-payment80002/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-provider-payment80004/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-provider-payment80005/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-provider-payment80006/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-provider-payment80007/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-providerHystrix-payment8008/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-providerHystrix-payment8009/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-stream-rabbitMQ-consumer8011/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-stream-rabbitMQ-consumer8012/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloud-stream-rabbitMQ-provider8010/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloudalibaba-config-nacos9015/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloudalibaba-consumer-nacos-order9010/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloudalibaba-provider-payment9001/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloudalibaba-provider-payment9002/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloudalibaba-sentinel-consumer9006/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloudalibaba-sentinel-consumer9007/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloudalibaba-sentinel-provider9004/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloudalibaba-sentinel-provider9005/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/cloudalibaba-sentinel-service9003/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/seata-account-server9101/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/seata-order-service9100/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/springCloud/seata-storage-server9102/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-api-commons/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-config-center-3344/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-config-client-3355/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-config-client-3366/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-consumer-feign-hystrix-order80/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-consumer-feign-order80/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-consumer-hystrix-dashboard9001/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-consumer-order80/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-consumer-order80/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-consumerconsul-order80/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-consumerzk-order80/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-eureka-server7001/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-eureka-server7002/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-gateway-gateway9527/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-gateway-gateway9527/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-provider-hystrix-payment8001/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-provider-payment8001/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-provider-payment8002/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-provider-payment8004/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-providerconsul-payment8006/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-providerconsul-payment8006/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-stream-rabbitmq-consumer8802/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-stream-rabbitmq-consumer8803/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloud-stream-rabbitmq-provider8801/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloudalibaba-config-nacos-client3377/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloudalibaba-consumer-nacos-order83/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloudalibaba-consumer-nacos-order84/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloudalibaba-provider-payment9001/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloudalibaba-provider-payment9002/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloudalibaba-provider-payment9003/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloudalibaba-provider-payment9004/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/cloudalibaba-sentinel-service8401/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/seata-account-service2003/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/seata-order-service2001/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/seata-storage-service2002/src/main/java" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
