@@ -2,7 +2,7 @@ package wang.study.Month12;
 
 import java.util.*;
 
-public class Main {
+public class Day07 {
     private List<List<Integer>> res = new ArrayList<>();
 
     /**

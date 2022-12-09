@@ -77,6 +77,7 @@
       <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/seata-order-service2001/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/springCloud/尚硅谷SpringCloud第2季当堂代码和脑图笔记/尚硅谷SpringCloud第2季当堂代码和脑图笔记2020.2.29/cloud2020/seata-storage-service2002/src/main/java" isTestSource="false" />
     </content>
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

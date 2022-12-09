@@ -1,7 +1,5 @@
 package wang.study.Month12;
 
-import com.alibaba.druid.sql.dialect.blink.parser.BlinkStatementParser;
-
 import java.util.*;
 
 public class Day08 {
@@ -222,91 +220,55 @@ public class Day08 {
     }
 
     /**
-     * 优化：不使用二维数组保存节点信息，使用 哈希表 + 链表的方式
+     * 优化：不使用二维数组保存节点信息，使用连接链表形式保存图信息；使用堆寻找下一个距离 k 最近的节点
+     * 缺点：没有更新堆中节点的值，每次跟新邻接节点信息时只是一味的向堆中插入数，因此同一个节点的距离信息会存在多份
+     * 对缺点的小优化：
+     * 可以选择在入队的同时，记录已经入队的最小时间。
+     * 然后入队时比较一下，如果更大就不入队。
+     * 这里写的时候没有比，会产生一些额外的入队。
+     * 但是都不能避免，如果新的点更小，之前更大的点仍在队伍中，直至其弹出才能过滤掉
      * @param times
      * @param n
      * @param k
      * @return
      */
     public int networkDelayTime2(int[][] times, int n, int k) {
-        /* 特殊情况处理 */
-        if (times == null || times.length == 0 || n < 1 || k < 1 || k > n) return -1;
-        /* 数据初始化 */
-        Map<Integer, List<Node>> cost = new HashMap<>();
-        PriorityQueue<Edge2> priorityQueue = new PriorityQueue<>(new Comparator<Edge2>() {
-            @Override
-            public int compare(Edge2 o1, Edge2 o2) {
-                return o1.cost - o2.cost;
+        final int INF = Integer.MAX_VALUE / 2;
+        /* 图的连接链表展现形式 */
+        List<int[]>[] g = new List[n];
+        for (int i = 0; i < n; ++i) {
+            g[i] = new ArrayList<int[]>();
+        }
+        for (int[] t : times) {
+            int x = t[0] - 1, y = t[1] - 1;
+            g[x].add(new int[]{y, t[2]});
+        }
+        /* 用于保存所有节点到节点 k 的距离 */
+        int[] dist = new int[n];
+        Arrays.fill(dist, INF);
+        dist[k - 1] = 0;
+        /* 用于记录所有节点到 k 节点的最短距离 */
+        // 先按照节点到 k 节点的 cost 进行排序，cost 相同的情况下再按照节点的 index 进行排序
+        PriorityQueue<int[]> pq = new PriorityQueue<int[]>((a, b) -> a[0] != b[0] ? a[0] - b[0] : a[1] - b[1]);
+        pq.offer(new int[]{0, k - 1});
+        while (!pq.isEmpty()) {
+            int[] p = pq.poll();
+            int time = p[0], x = p[1];
+            /* 由于一个节点距离 k 的最近距离会更新多次，
+            而且每次更新都会在堆中插入数据，但是我们需要的只是最后一次更新插入的数据，因此我们需要跳过 */
+            if (dist[x] < time) {
+                continue;
             }
-        });
-        for (int i = 0; i < times.length; i++) {
-            List<Node> list = cost.getOrDefault(times[i][0], new LinkedList<>());
-            list.add(new Node(times[i][0], times[i][1], times[i][2]));
-            cost.put(times[i][0], list);
-        }
-        for (int i = 1; i <= n ; i++) {
-            priorityQueue.add(new Edge2(i, Integer.MAX_VALUE));
-        }
-        /* Dijkstra 算法 */
-        int index = k; // 上一个距离 k 最短的节点
-        int res = 0;
-        priorityQueue.remove(new Edge2(k, Integer.MAX_VALUE));
-        while (!priorityQueue.isEmpty() && index != -1) {
-            /* (1) 更新与 index 相连接的其他节点最短路径 */
-            List<Node> edges = cost.getOrDefault(index, new LinkedList<>());
-            for (Node edge : edges) {
-                if (map.containsKey(edge.tar)) {
-                    map.put(edge.tar, Math.min(map.get(edge.tar), res + edge.cost));
+            /* 找到了下一个距离 k 最近的节点，更新该节点指向的其他节点最短路径 */
+            for (int[] ele : g[x]) {
+                int index = ele[0], newCost = dist[x] + ele[1];
+                if (newCost < dist[index]) {
+                    dist[index] = newCost;
+                    pq.offer(new int[]{newCost, index});
                 }
             }
-            /* 找到下一个距离 k 最小的节点 */
-            index = -1;
-            res = Integer.MAX_VALUE;
-            for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-                if (entry.getValue() < res) {
-                    res = entry.getValue();
-                    index = entry.getKey();
-                }
-            }
-            if (index != -1) {
-                map.remove(index);
-            }
         }
-        return index == -1 ? -1 : res;
-    }
-
-
-    private class Node {
-        Node(int src, int tar, int cost) {
-            this.src = src;
-            this.tar = tar;
-            this.cost = cost;
-        }
-        int src;
-        int tar;
-        int cost;
-    }
-
-    private class Edge2 {
-        int index;
-        int cost;
-
-        public Edge2(int index, int cost) {
-            this.index = index;
-            this.cost = cost;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Edge2 edge2 = (Edge2) o;
-            return index == edge2.index && cost == edge2.cost;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(index, cost);
-        }
+        int ans = Arrays.stream(dist).max().getAsInt();
+        return ans == INF ? -1 : ans;
     }
 }
