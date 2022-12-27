@@ -1014,7 +1014,7 @@ RocketMQ中的消息存储在本地文件系统中，这些相关文件默认在
 * abort：该文件在Broker启动后会自动创建，正常关闭Broker，该文件会自动消失。若在没有启动Broker的情况下，发现这个文件是存在的，则说明之前Broker的关闭是非正常关闭。
 * checkpoint：其中存储着commitlog、consumequeue、index文件的最后刷盘时间戳
 * commitlog：其中存放着commitlog文件，而消息是写在commitlog文件中的
-* conæg：存放着Broker运行期间的一些配置数据
+* config：存放着Broker运行期间的一些配置数据
 * consumequeue：其中存放着consumequeue文件，队列就存放在这个目录中
 * index：其中存放着消息索引文件indexFile
 * lock：运行期间使用到的全局资源锁
@@ -1814,7 +1814,7 @@ public class SyncProducer {
 // 消息发送的状态
 public enum SendStatus {
     SEND_OK, // 发送成功
-    FLUSH_DISK_TIMEOUT,  // 刷盘超时。当Broker设置的刷盘策略为同步刷盘时才可能出现这种异常状态。异步刷盘不会出现
+    FLUSH_DISK_TIMEOUT,  // 刷盘超时。当Broker设置的刷盘策略为同步刷盘时才可能出现这种异常状态。异步刷盘不会出现
     FLUSH_SLAVE_TIMEOUT, // Slave同步超时。当Broker集群设置的Master-Slave的复制方式为同步复制时才可能出现这种异常状态。异步复制不会出现
     SLAVE_NOT_AVAILABLE, // 没有可用的Slave。当Broker集群设置为Master-Slave的复制方式为同步复制时才可能出现这种异常状态。异步复制不会出现
 }
@@ -2157,9 +2157,9 @@ public class OtherConsumer {
 ```java
 // 描述本地事务执行状态
 public enum LocalTransactionState {
-    COMMIT_MESSAGE,  // 本地事务执行成功
-    ROLLBACK_MESSAGE,  // 本地事务执行失败
-    UNKNOW,  // 不确定，表示需要进行回查以确定本地事务的执行结果
+    COMMIT_MESSAGE,  // 本地事务执行成功
+    ROLLBACK_MESSAGE,  // 本地事务执行失败
+    UNKNOW,  // 不确定，表示需要进行回查以确定本地事务的执行结果
 }
 ```
 
@@ -2196,9 +2196,9 @@ Producer`回调操作`执行的结果为本地事务状态，其会发送给TC�
 ```java
 // 描述本地事务执行状态
 public enum LocalTransactionState {
-    COMMIT_MESSAGE,  // 本地事务执行成功
-    ROLLBACK_MESSAGE,  // 本地事务执行失败
-    UNKNOW,  // 不确定，表示需要进行回查以确定本地事务的执行结果
+    COMMIT_MESSAGE,  // 本地事务执行成功
+    ROLLBACK_MESSAGE,  // 本地事务执行失败
+    UNKNOW,  // 不确定，表示需要进行回查以确定本地事务的执行结果
 }
 ```
 
@@ -2446,7 +2446,7 @@ Consumer的pullBatchSize属性与consumeMessageBatchMaxSize属性是否设置的
     // 其直接将这条消息构成一个子列表返回。并没有再进行分割
 public class MessageListSplitter implements Iterator<List<Message>> {
     // 指定极限值为4M
-    private final int SIZE_LIMIT =  4 * 1024 * 1024 ;
+    private final int SIZE_LIMIT =  4 * 1024 * 1024 ;
     // 存放所有要发送的消息
     private final List<Message> messages;
     // 要进行批量发送消息的小集合起始索引
