@@ -145,7 +145,7 @@ Topic是消息的一级分类，Tag是消息的二级分类。
 RocketMQ中每个消息拥有唯一的MessageId，且可以携带具有业务标识的Key，以方便对消息的查询。不过需要注意的是，MessageId有两个：在生产者send()消息时会自动生成一个MessageId（msgId)，当消息到达Broker后，Broker也会自动生成一个MessageId(offsetMsgId)。msgId、offsetMsgId与key都称为消息标识。
 
 * msgId：由producer端生成，其生成规则为：producerIp + 进程pid + MessageClientIDSetter类的ClassLoader的hashCode +当前时间 + AutomicInteger自增计数器
-* offsetMsgId：由broker端生成，其生成规则为：brokerIp + 物理分区的offset（Queue中的偏移量）
+* offsetMsgId：由 broker 端生成，其生成规则为：brokerIp + 物理分区的 offset（Queue中的偏移量）
 * key：由用户指定的业务相关的唯一标识
 
 ## 二、系统架构
