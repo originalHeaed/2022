@@ -30,9 +30,9 @@ public class SqlReceiver {
      */
     public static String GROUP = "sqlFilterGP";
 
-    public static int total = 0;
+    public int total = 0;
 
-    public static void main(String[] args) throws MQClientException {
+    public void test() throws MQClientException {
         /* 1. 定义消费者 */
         DefaultMQPushConsumer defaultMQPushConsumer = new DefaultMQPushConsumer(GROUP);
         /* 2. 进行配置 */
@@ -47,5 +47,12 @@ public class SqlReceiver {
         });
         /* 3. 启动消费者 */
         defaultMQPushConsumer.start();
+
+    }
+
+
+    public static void main(String[] args) throws MQClientException {
+        SqlReceiver sqlReceiver = new SqlReceiver();
+        sqlReceiver.test();
     }
 }
