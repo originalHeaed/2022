@@ -49,6 +49,8 @@ public class MessageListSplit implements Iterator<List<Message>> {
         int total = 0; // 这一批需要发送的消息总大小
         int next = curr_index; // 使用滑动窗口计算当前 [curr_index, next] 之间所有消息的大小
         for (;next < resource.size(); ++next) {
+            Message message = resource.get(next);
+            assert message.getDelayTimeLevel() <= 0 : "not allowed send delay message"; // 不允许发送延迟消息
             int tem = calculatorMessageSize(resource.get(next));
             if ((total + tem) > MAX_SZIE) {
                 break;
@@ -61,6 +63,7 @@ public class MessageListSplit implements Iterator<List<Message>> {
             next++;
         }
         List<Message> subList = resource.subList(curr_index, next); // 返回一个视图，无法修改
+        System.out.println("亚黑，该批次发送了：" + (next - curr_index) + "条记录");
         curr_index = next;
         return subList;
     }
