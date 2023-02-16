@@ -4,8 +4,9 @@ import org.apache.rocketmq.client.exception.MQBrokerException;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.common.message.Message;
-import org.apache.rocketmq.common.message.MessageExt;
 import org.apache.rocketmq.remoting.exception.RemotingException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.nio.charset.Charset;
 
@@ -13,6 +14,8 @@ import java.nio.charset.Charset;
  * 同步消息重试发送器
  */
 public class SyncMsgRetrySender {
+    private static final Logger logger = LoggerFactory.getLogger(SyncMsgRetrySender.class);
+
     /**
      * namesrv 的 ip:port
      */
@@ -40,6 +43,7 @@ public class SyncMsgRetrySender {
         producer.setNamesrvAddr(NAME_ADDR);
         producer.setRetryTimesWhenSendFailed(MAX_RETRY_TIMES); // 同步消息最大重试次数
         producer.setSendMsgTimeout(4000); // 超时时间（默认为 3 s）
+        producer.setDefaultTopicQueueNums(4); // 实现全局顺序消息
         producer.start();
         /* 3. 开始生成消息 */
         Message message = new Message(TOPIC, "syncRetry".getBytes(Charset.forName("utf-8")));

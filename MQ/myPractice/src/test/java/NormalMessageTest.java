@@ -7,6 +7,8 @@ import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.remoting.exception.RemotingException;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 public class NormalMessageTest {
     /**
      * 同步发送消息
@@ -40,9 +42,9 @@ public class NormalMessageTest {
         producer.setDefaultTopicQueueNums(2);
         producer.setProducerGroup("wangGroup");
         producer.start();
-        for (int i = 0; i < 20; i++) {
-            Message message = new Message("20230202Topic", "tag1", "hello".getBytes());
-            message.setKeys("key: " + i);
+        for (int i = 0; i < 1; i++) {
+            Message message = new Message("retryOrderlyTp", "tag1", "hello".getBytes());
+            message.setKeys("key: 10");
             /**
              * 异步发送消息，会使用异步发送执行器来执行这个发送任务（另启用一个线程）
              */
@@ -79,5 +81,13 @@ public class NormalMessageTest {
         }
         /* 关闭 producer */
         producer.shutdown();
+    }
+
+    @Test
+    public void test4() {
+        String[] split = "69006||0000|交易成功|8880080001|121||9900|测试客户1||8|9-000199999|132000|Add|0571-26698888|021-61615550|13588877404|mail|0|0||00|60036660|".split("\\|");
+        System.out.println(split.length);
+        System.out.println(split[22]);
+        System.out.println(Arrays.toString(split));
     }
 }

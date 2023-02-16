@@ -6,6 +6,7 @@ import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
 import org.apache.rocketmq.client.consumer.listener.ConsumeOrderlyStatus;
 import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
 import org.apache.rocketmq.client.exception.MQClientException;
+import org.apache.rocketmq.common.consumer.ConsumeFromWhere;
 import org.apache.rocketmq.common.message.MessageExt;
 
 import java.util.List;
@@ -34,8 +35,9 @@ public class ConcurrentlyMsgReceiver {
         DefaultMQPushConsumer defaultMQPushConsumer = new DefaultMQPushConsumer(GP);
         /* 2. 进行配置 */
         defaultMQPushConsumer.setNamesrvAddr(NAME_SRV);
+        defaultMQPushConsumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
         /* todo 对于无序消息，不能直接直接消费超时时间，其消息消费超时时间有自己的规则，可以指定其最大消费重试次数（默认 16）  */
-        defaultMQPushConsumer.setMaxReconsumeTimes(32);
+        defaultMQPushConsumer.setMaxReconsumeTimes(1);
         defaultMQPushConsumer.subscribe(TOPIC, "*");
         defaultMQPushConsumer.registerMessageListener((List<MessageExt> list, ConsumeConcurrentlyContext consumeConcurrentlyContext) -> {
             /* 如果结果返回 ConsumeConcurrentlyStatus.RECONSUME_LATER、null、抛出异常 该消息后续将会进行
