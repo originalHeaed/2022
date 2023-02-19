@@ -25,7 +25,7 @@ public class OrderlyMsgRetryReceiver {
     /**
      * 消息 topic
      */
-    public static String TOPIC = "retryOrderlyTp";
+    public static String TOPIC = "retryOrderlyTp2";
 
     /**
      * 消费者 group

@@ -1,13 +1,16 @@
 import org.apache.rocketmq.client.exception.MQBrokerException;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
+import org.apache.rocketmq.client.producer.MessageQueueSelector;
 import org.apache.rocketmq.client.producer.SendCallback;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
+import org.apache.rocketmq.common.message.MessageQueue;
 import org.apache.rocketmq.remoting.exception.RemotingException;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class NormalMessageTest {
     /**
@@ -43,12 +46,18 @@ public class NormalMessageTest {
         producer.setProducerGroup("wangGroup");
         producer.start();
         for (int i = 0; i < 1; i++) {
-            Message message = new Message("retryOrderlyTp", "tag1", "hello".getBytes());
+            Message message = new Message("retryOrderlyTp2", "tag1", "hello".getBytes());
             message.setKeys("key: 10");
             /**
              * 异步发送消息，会使用异步发送执行器来执行这个发送任务（另启用一个线程）
              */
-            producer.send(message, new SendCallback() {
+            producer.send(message, new MessageQueueSelector() {
+                @Override
+                public MessageQueue select(List<MessageQueue> list, Message message, Object o) {
+                    /* 固定向第一个 queue 发送消息 */
+                    MessageQueue messageQueue = list.get(1);
+                    return messageQueue;
+                }},  "as", new SendCallback() {
                 @Override
                 public void onSuccess(SendResult sendResult) {
                     System.out.println("success" + sendResult);
