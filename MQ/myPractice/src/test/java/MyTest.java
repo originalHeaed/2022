@@ -1,4 +1,7 @@
+import org.apache.rocketmq.common.message.MessageExt;
 import org.junit.Test;
+
+import java.lang.reflect.Method;
 
 public class MyTest {
 
@@ -42,5 +45,25 @@ public class MyTest {
                 }
             }
         }
+    }
+
+    @Test
+    public void test() {
+        Class clazz = TestReflect.class;
+        Method[] declaredMethods = clazz.getDeclaredMethods();
+        for (Method method : declaredMethods) {
+            System.out.println(method.getName());
+        }
+    }
+    class TestReflect0 {
+        public void method0() {};
+    }
+
+
+    class TestReflect extends TestReflect0{
+        public void method1() {};
+        private void method2() {};
+
+        public final void method3() {};
     }
 }
